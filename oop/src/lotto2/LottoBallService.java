@@ -1,4 +1,4 @@
-package lotto;
+package lotto2;
 
 /**
  * @date   :2016. 6. 24.
@@ -9,5 +9,7 @@ package lotto;
 public interface LottoBallService {
 	public void setLottoBall();
 	public int[] getLottoBall();
+	public void  sort(int []arr);
+	void setLottoBall(LottoBean lot);
 	boolean isDuplication(int num, int i);
 }

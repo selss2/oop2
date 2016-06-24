@@ -1,4 +1,4 @@
-package lotto;
+package lotto2;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class LottoBallMain {
 			LottoBean lot = new LottoBean();
 			LottoBallService service = new LottoBallServiceImpl();
 			StringBuffer buf = new StringBuffer();
-			service.setLottoBall();
+			service.setLottoBall(lot);
 			int[] lottos = service.getLottoBall();
 			for (int i = 0; i < lottos.length; i++) {
 				Arrays.sort(lottos);

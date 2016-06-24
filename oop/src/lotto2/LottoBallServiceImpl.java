@@ -1,4 +1,4 @@
-package lotto;
+package lotto2;
 
 /**
  * @date :2016. 6. 24.
@@ -14,8 +14,7 @@ public class LottoBallServiceImpl implements LottoBallService {
 	}
 
 	@Override
-	public void setLottoBall() {
-		LottoBean lot = new LottoBean();
+	public void setLottoBall(LottoBean lot) {
 		int i = 0;
 		while (true) {
 			lot.setNumber();
@@ -48,5 +47,14 @@ public class LottoBallServiceImpl implements LottoBallService {
 		return false;
 	}
 
+	@Override
+	public void setLottoBall() {
+
+	}
+
+	@Override
+	public void sort(int[] arr) {
+
+	}
 
 }
