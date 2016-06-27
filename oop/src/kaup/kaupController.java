@@ -2,9 +2,7 @@
  * 
  */
 package kaup;
-
 import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 /**

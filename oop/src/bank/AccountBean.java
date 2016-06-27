@@ -15,7 +15,6 @@ public class AccountBean {
 	private int accountNo; // 인스턴스 변수는 초기화를 하지 않는다
 	private String name;
 	private int money;
-
 	private String pw;
 	private String id;
 
@@ -35,9 +34,14 @@ public class AccountBean {
 	}
 
 	public void setAccountNo() {
+		this.accountNo = (int) (Math.random() * 999999) + 100000;
 	}
 
 	public void setName(String name) {
+		this.name = name;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public void setMoney(int money) {
@@ -70,7 +74,6 @@ public class AccountBean {
 
 	@Override
 	public String toString() { // 메소드 오버라이딩 - 한사람당 하나의 값을 가져야하기 때문에 오버라이딩!
-		return "Account [계좌번호=" + accountNo + ", " + "이름=" + name + ", " + "잔액=" + money + ", " + "비번=" + pw + ", "
-				+ "아이디=" + id + "]";
+		return "Account [계좌번호=" + accountNo + ", " + "이름=" + name + ", " + "잔액=" + money + ", " + "아이디=" + id + "]";
 	}
 }
