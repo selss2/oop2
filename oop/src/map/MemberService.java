@@ -11,27 +11,20 @@ import java.util.List;
  * @story  :
  */
 public interface MemberService {
-	
-	
-	// 1 회원가입
-	public String join(MemberBean member);
-	// 2 로그인
+	/*
+	"--- 회원이 보는 화면 ---\n"
+	+ "1회원가입 2로그인 3내정보보기(detail) 4내정보수정(비번) 5탈퇴 0종료\n"
+	+ "--- 관리자 화면 ---\n"
+	+ "11회원목록 12검색(ID) 13검색(이름) 14검색(성별) 15회원수 "))
+	 * */
+	public String join(MemberBean member); 
 	public String login(MemberBean member);
-	// 3 내정보보기
 	public MemberBean detail();
-	// 4 내정보수정(비번)
-	public void updatePw(MemberBean member);
-	// 5 회원탈퇴
+	public void updatePW(MemberBean member);
 	public String delete();
-	
-	// 11 회원목록
 	public List<MemberBean> list();
-	// 12 검색(ID)
 	public MemberBean findById(String id);
-	// 13 검색(이름)
 	public List<MemberBean> findByName(String name);
-	// 14 검색(성별)
-	public List<MemberBean> findByGender(String gender);
-	// 15 회원수
+	public int countByGender(String gender);
 	public int count();
 }
